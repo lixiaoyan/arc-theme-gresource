@@ -6,12 +6,12 @@ DEST=./build/$NAME
 
 echo "Building theme $NAME"
 
-rm -rf $DEST
-cp -r $SOURCE $DEST
+rm -rf "$DEST"
+cp -r "$SOURCE" "$DEST"
 
-FILES=$(find $DEST -type f -printf "%P\n" | xargs -i echo "    <file>{}</file>")
+FILES=$(find "$DEST" -type f -printf "%P\n" | xargs -i echo "    <file>{}</file>")
 
-cat << EOF > $DEST/gnome-shell-theme.gresource.xml
+cat <<EOF >"$DEST/gnome-shell-theme.gresource.xml"
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/org/gnome/shell/theme">
@@ -20,5 +20,8 @@ $FILES
 </gresources>
 EOF
 
-(cd $DEST ; glib-compile-resources gnome-shell-theme.gresource.xml)
+(
+  cd "$DEST"
+  glib-compile-resources gnome-shell-theme.gresource.xml
+)
 echo "-> $DEST/gnome-shell-theme.gresource"
