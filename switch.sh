@@ -1,7 +1,5 @@
 #!/bin/bash
 
-./backup.sh
-
 NAME=$1
 
 echo "Switching to theme $NAME..."
