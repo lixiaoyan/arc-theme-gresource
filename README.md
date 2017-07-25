@@ -10,8 +10,8 @@ $ cd arc-theme-gresource
 
 $ ./build.sh
 
-$ sudo ./switch.sh Arc
-$ sudo ./switch.sh Arc-Dark
+$ ./switch.sh Arc
+$ ./switch.sh Arc-Dark
 ```
 
 ## TODO
