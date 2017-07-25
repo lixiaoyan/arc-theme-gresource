@@ -12,8 +12,6 @@ $ ./build.sh
 
 $ sudo ./switch.sh Arc
 $ sudo ./switch.sh Arc-Dark
-
-$ sudo ./restore.sh
 ```
 
 ## TODO
